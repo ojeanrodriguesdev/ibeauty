@@ -6,7 +6,7 @@ import SafeFormattedMessage from '../ui/SafeFormattedMessage'
 
 const Card = ({ title, description, imageUrl, isConsulting }) => (
   <div
-    className={`w-full bg-customWhiteFC border-customGray border-opacity-20 border-2 rounded-[40px] shadow-xl overflow-hidden p-4  md:w-[75%] md:h-[800px] lg:w-[400px] md:flex md:flex-col md:items-center  ${
+    className={`w-full bg-customWhiteFC border-customGray border-opacity-20 border-2 rounded-[40px] shadow-xl overflow-hidden p-4  md:w-[75%] lg:h-[800px] lg:w-[400px] md:flex md:flex-col md:items-center  ${
       isConsulting ? 'md:items-start' : 'md:items-center'
     } md:p-6`}
   >

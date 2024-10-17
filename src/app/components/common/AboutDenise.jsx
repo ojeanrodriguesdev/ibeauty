@@ -1,57 +1,72 @@
-'use client';
+'use client'
 
-import Image from "next/image";
-import SafeFormattedMessage from '../ui/SafeFormattedMessage'; 
-import ButtonKnowMore from './ButttonKnowMore';
-
+import Image from 'next/image'
+import SafeFormattedMessage from '../ui/SafeFormattedMessage'
+import ButtonKnowMore from './ButttonKnowMore'
 
 const AboutSection = () => {
   return (
-    <section className="relative min-h-screen w-full">
-      <div className="lg:block hidden absolute inset-0">
+    <section className="relative min-h-screen w-full flex flex-col justify-around">
+      {/* Imagem de fundo para desktop */}
+      <div className="hidden xl:block absolute inset-0">
         <Image
           src="/images/About/backgroundAboutDenise.png"
           alt="iBeauty Center Background"
           layout="fill"
           objectFit="cover"
+          objectPosition="right"
+          loading="eager"
+          priority={true}
           className="opacity-100"
           quality={100}
         />
       </div>
-      <div className="lg:hidden block absolute inset-0">
+
+      {/* Imagem de fundo para mobile e tablet (tablet usa mobile) */}
+      <div className="xl:hidden block absolute inset-0">
         <Image
           src="/images/About/backgroundAboutDeniseMobile.png"
           alt="iBeauty Center Background"
           layout="fill"
           objectFit="cover"
+          objectPosition="top"
+          loading="eager"
+          priority={true}
           className="opacity-100"
           quality={100}
         />
       </div>
-      <div className="relative z-10 flex flex-col lg:items-start items-center justify-center 2xl:pt-44">
-        <div className="w-full flex lg:items-start items-center lg:justify-start justify-center">
-          <div className="flex flex-col 2xl:mb-5 lg:mb-5 mb-48">
-            <h1 className="text-customLightBrown text-center 2xl:pl-[350px] lg:pl-[350px] pl-0 mx-5 font-openSans text-[25px] lg:text-6xl tracking-[0.16em]">
+
+      {/* Título no topo */}
+      <div className="relative z-10 flex flex-col items-center justify-start mt-0 md:mt-28 lg:mt-44 xl:mt-10">
+        <div className="w-full flex items-start justify-center">
+          <div className="flex flex-col">
+            <h1 className="text-customLightBrown text-center mx-5 font-openSans text-[25px] md:text-[40px] tracking-[0.16em]">
               <SafeFormattedMessage id="about.heading" />
             </h1>
-            <span className="lg:hidden block text-customBrown font-light font-openSans tracking-wide text-[12px] text-center">
+            <span className="text-customBrown font-light font-openSans tracking-wide text-[10px] md:text-[16px] text-center">
               <SafeFormattedMessage id="about.subheading" />
             </span>
           </div>
         </div>
-        <div className="relative lg:pl-48 px-16 flex flex-col items-center">
-          <div className="container shadow-xl bg-customWhite lg:mt-[72px] mt-[380px] mb-8 lg:py-[36px] py-3 lg:px-[65px] px-12 border-2 rounded-3xl max-w-[800px]">
-            <p className="text-customBrown text-center lg:text-[22px] text-[10px] tracking-[0.11em]">
-              <SafeFormattedMessage id="about.description" />
-            </p>
-          </div>
-          <div className="lg:pr-[650px] mt-8 mb-20 right-[50px]">
-            <ButtonKnowMore />
-          </div>
+      </div>
+
+      {/* Descrição e Botão na parte inferior (alinhamento em 3 colunas e 4 linhas para desktops) */}
+      <div className="relative w-auto px-4 py-4 flex flex-col items-center mt-auto xl:mt-0 xl:grid xl:grid-cols-2 xl:gap-4 md:mx-10 lg:mx-10 xl:mx-0">
+        {/* Container da descrição ocupando 50% da tela */}
+        <div className="container shadow-xl bg-customWhite py-3 px-4 md:py-6 md:px-12 md:mx-18 lg:mx-24 xl:col-span-1 xl:row-span-1 border-2 rounded-3xl w-full">
+          <p className="text-customBrown text-center text-[10px] md:text-[18px] lg:text-[23px] xl:text-[20px] 2xl:text-[24px] tracking-[0.11em]">
+            <SafeFormattedMessage id="about.description" />
+          </p>
         </div>
+
+        {/* Botão de saber mais centralizado abaixo da descrição */}
+      </div>
+      <div className="w-full flex justify-center pb-10 xl:col-span-1 xl:row-span-1">
+        <ButtonKnowMore />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AboutSection;
+export default AboutSection
