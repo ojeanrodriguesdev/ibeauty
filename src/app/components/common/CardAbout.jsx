@@ -41,9 +41,9 @@ export default function CardAbout() {
   const intl = useIntl()
 
   return (
-    <div className="flex flex-col items-center bg-customWhite px-4 md:px-14 pt-[100px] xl:pt-64">
+    <div className="flex flex-col items-center bg-customWhite px-4 md:px-14 pt-[150px] md:pt-[250px] xl:pt-64">
       {/* Título e Subtítulo */}
-      <div className="text-center text-customBrown font-openSans text-[18px] md:text-[25px] font-semibold leading-[34.04px] tracking-[0.16em] w-full mb-20 hidden md:block">
+      <div className="text-center text-customBrown font-openSans text-[18px] md:text-[25px] font-semibold leading-[34.04px] tracking-[0.16em] w-full mb-20 hidden xl:block">
         <SafeFormattedMessage
           id="card.about"
           values={{

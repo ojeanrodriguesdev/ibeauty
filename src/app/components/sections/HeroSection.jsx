@@ -12,7 +12,7 @@ const HeroSection = () => {
           alt="Background iBeauty Center"
           layout={true}
           style={{ objectFit: "cover" }}
-          className="lg:block hidden opacity-100 object-cover object-center h-auto"
+          className="xl:block hidden opacity-100 object-cover object-center h-auto"
           width={2560}
           height={1020}
           quality={100}
@@ -22,7 +22,7 @@ const HeroSection = () => {
           alt="Background iBeauty Center"
           layout={true}
           style={{ objectFit: "cover" }}
-          className="lg:hidden relative opacity-100 object-cover object-center h-auto"
+          className="xl:hidden relative opacity-100 object-cover object-center h-auto"
           width={1338}
           height={2764}
           quality={100}
@@ -32,12 +32,12 @@ const HeroSection = () => {
           alt="Background iBeauty Center"
           layout={true}
           style={{ objectFit: "cover" }}
-          className="lg:hidden relative opacity-100 object-cover object-center h-auto z-40"
+          className="xl:hidden relative opacity-100 object-cover object-center h-auto z-40"
           width={1338}
           height={2764}
           quality={100}
         />
-        <div className="lg:hidden relative z-50 p-4 text-center mt-[-310px]">
+        <div className="xl:hidden relative z-50 p-4 text-center mt-[-310px]">
         <h1 className="text-customBrown tracking-[0.16em] font-openSans font-bold text-[18px]">
           <SafeFormattedMessage id="heroSection.headline" />
         </h1>
